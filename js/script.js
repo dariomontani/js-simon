@@ -27,6 +27,11 @@ h1.append(random);
 contenitore.append(h1);
 console.log(random);
 
+// facciamo scomparire i numeri dopo 5 secondi
+function myTimeout() {
+    contenitore.remove(h1);
+}
+setTimeout(myTimeout, 5000);
 
 
 
