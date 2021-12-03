@@ -30,8 +30,20 @@ console.log(random);
 // facciamo scomparire i numeri dopo 5 secondi
 function myTimeout() {
     contenitore.remove(h1);
+    console.log('myTimeout');
 }
-setTimeout(myTimeout, 5000);
+setTimeout(myTimeout, 1000 * 5);
+
+// facciamo partire il timer di 30 secondi e mostriamo 6 prompt
+function myTimeoutPrompt() {
+    arrayNumbersUser = [];
+    for (let i = 0; i < 6; i++) {
+        let scriviNumeri = prompt('inserisci il numero');
+        arrayNumbersUser.push(scriviNumeri);
+        console.log(arrayNumbersUser);
+    }
+}
+setTimeout(myTimeoutPrompt, 1000 * 30);
 
 
 
