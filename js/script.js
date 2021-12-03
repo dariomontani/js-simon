@@ -43,7 +43,7 @@ function myTimeoutPrompt() {
         console.log(arrayNumbersUser);
     }
 }
-setTimeout(myTimeoutPrompt, 1000 * 30);
+setTimeout(myTimeoutPrompt, 1000 * 35);
 
 
 
