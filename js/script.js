@@ -8,7 +8,6 @@
 // * Individuate gli elementi di cui avete bisogno per realizzare il programma.
 
 // genero 5 numeri casuali
-
 function generateNumbers(min, max) {
     arrayNumbers = [];
     while (arrayNumbers.length < 5) {
@@ -20,6 +19,14 @@ function generateNumbers(min, max) {
     return arrayNumbers;
 }
 
+// visualizzo in pagina i 5 numeri random
 random = generateNumbers(0, 100);
+let contenitore = document.querySelector('.container');
+let h1 = document.createElement('h1');
+h1.append(random);
+contenitore.append(h1);
 console.log(random);
+
+
+
 
