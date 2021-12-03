@@ -6,3 +6,20 @@
 // * Pensate prima in italiano.
 // * Dividete in piccoli problemi la consegna.
 // * Individuate gli elementi di cui avete bisogno per realizzare il programma.
+
+// genero 5 numeri casuali
+
+function generateNumbers(min, max) {
+    arrayNumbers = [];
+    while (arrayNumbers.length < 5) {
+        let randomNumbers = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (!(arrayNumbers.includes(randomNumbers))) {
+            arrayNumbers.push(randomNumbers);
+        }
+    }
+    return arrayNumbers;
+}
+
+random = generateNumbers(0, 100);
+console.log(random);
+
