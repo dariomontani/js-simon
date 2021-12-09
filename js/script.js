@@ -9,10 +9,10 @@
 
 // genero 5 numeri casuali
 function generateNumbers(min, max) {
-    arrayNumbers = [];
+    const arrayNumbers = [];
     while (arrayNumbers.length < 5) {
         let randomNumbers = Math.floor(Math.random() * (max - min + 1)) + min;
-        if (!(arrayNumbers.includes(randomNumbers))) {
+        if (arrayNumbers.includes(randomNumbers) == false) {
             arrayNumbers.push(randomNumbers);
         }
     }
@@ -20,30 +20,41 @@ function generateNumbers(min, max) {
 }
 
 // visualizzo in pagina i 5 numeri random
-random = generateNumbers(0, 100);
+let arrayRandomNumbers = [];
+let random = generateNumbers(0, 100);
 let contenitore = document.querySelector('.container');
 let h1 = document.createElement('h1');
 h1.append(random);
 contenitore.append(h1);
-console.log(random);
+arrayRandomNumbers.push(random);
+console.log('numeri random', arrayRandomNumbers);
 
 // facciamo scomparire i numeri dopo 5 secondi
 function myTimeout() {
     contenitore.remove(h1);
     console.log('myTimeout');
 }
-setTimeout(myTimeout, 1000 * 5);
+setTimeout(myTimeout, 1000 * 2);
 
-// facciamo partire il timer di 30 secondi e mostriamo 6 prompt
+// facciamo partire il timer di 30 secondi e mostriamo 5 prompt
 function myTimeoutPrompt() {
-    arrayNumbersUser = [];
-    for (let i = 0; i < 6; i++) {
-        let scriviNumeri = prompt('inserisci il numero');
+    const arrayNumbersUser = [];
+    for (let i = 0; i < 5; i++) {
+        let scriviNumeri = parseInt(prompt('inserisci il numero'));
         arrayNumbersUser.push(scriviNumeri);
-        console.log(arrayNumbersUser);
+        console.log('arrayNumbersUser', arrayNumbersUser);
+        if (arrayNumbersUser.includes(arrayRandomNumbers) == true) {
+            console.log('Hai vinto');
+        } else {
+            console.log('Hai perso');
+        }
     }
 }
-setTimeout(myTimeoutPrompt, 1000 * 35);
+
+setTimeout(myTimeoutPrompt, 1000 * 5);
+
+// confrontiamo i numeri inseriti dall'utente e i numeri casuali
+
 
 
 
