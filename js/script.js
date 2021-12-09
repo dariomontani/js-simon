@@ -20,13 +20,11 @@ function generateNumbers(min, max) {
 }
 
 // visualizzo in pagina i 5 numeri random
-let arrayRandomNumbers = [];
-let random = generateNumbers(0, 100);
+let arrayRandomNumbers = generateNumbers(0, 100);
 let contenitore = document.querySelector('.container');
 let h1 = document.createElement('h1');
-h1.append(random);
+h1.append(arrayRandomNumbers);
 contenitore.append(h1);
-arrayRandomNumbers.push(random);
 console.log('numeri random', arrayRandomNumbers);
 
 // facciamo scomparire i numeri dopo 5 secondi
