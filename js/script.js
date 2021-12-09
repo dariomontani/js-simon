@@ -43,7 +43,7 @@ function myTimeoutPrompt() {
         let scriviNumeri = parseInt(prompt('inserisci il numero'));
         arrayNumbersUser.push(scriviNumeri);
         console.log('arrayNumbersUser', arrayNumbersUser);
-        if (arrayNumbersUser.includes(scriviNumeri) == true) {
+        if (arrayRandomNumbers.includes(scriviNumeri) == true) {
             console.log('Hai vinto');
         } else {
             console.log('Hai perso');
